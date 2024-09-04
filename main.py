@@ -3,10 +3,12 @@
 #list is from the american ornithological society website https://checklist.americanornithology.org/
 
 import csv
+import pandas as pd
 
 with open('NACC_list_species.csv',mode='r') as csv_file:
     BirdFile = csv.reader(csv_file)
 
+BirdData = pd.read_csv('NACC_list_species.csv')
 
 
 
