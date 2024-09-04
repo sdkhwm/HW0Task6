@@ -2,11 +2,13 @@
 #this program reads a CSV file of bird names and randomly selects one
 #list is from the american ornithological society website https://checklist.americanornithology.org/
 
-import csv
+import numpy as np
+import pandas as pd
 
-with open('NACC_list_species.csv',mode='r') as csv_file:
-    BirdFile = csv.reader(csv_file)
-
-
+N=np.random.randint(0,2201)
 
 
+BirdData = pd.read_csv('NACC_list_species.csv')
+
+
+print(BirdData.common_name[N])
