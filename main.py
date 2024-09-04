@@ -6,5 +6,7 @@ import csv
 
 with open('NACC_list_species.csv',mode='r') as csv_file:
     BirdFile = csv.reader(csv_file)
-    for lines in BirdFile:
-        print(lines)
+
+
+
+
