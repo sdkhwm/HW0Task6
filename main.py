@@ -1,16 +1,10 @@
-# This is a sample Python script.
+#This is the Task 8 of HW0
+#this program reads a CSV file of bird names and randomly selects one
+#list is from the american ornithological society website https://checklist.americanornithology.org/
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import csv
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+with open('NACC_list_species.csv',mode='r') as csv_file:
+    BirdFile = csv.reader(csv_file)
+    for lines in BirdFile:
+        print(lines)
